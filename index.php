@@ -1,6 +1,4 @@
 <?php
-include('../config/counter.php');
-count_people(ip_counter);
 include_once("./function.php");
 if(isset($_POST['submit'])){
 	$ip_value=$_POST['ip'];
@@ -136,79 +134,79 @@ if(isset($_POST['submit'])){
 							<td align="center">
 								<h4 >IP位置</h4>
 							</td>
-</tr>
-<tr>
-<td>
-    <input type="text" name="ip" value="<?echo $ip_value;?>">
-</td>
-</tr>
-<tr>
-<td id="h4" align="center">
-    <h4>子網路遮罩</h4>
-</td>
-</tr>
-<tr>
-<td>
-    <input type="text" name="mask" value="<?echo $ms_value; ?>">
-</td>
-</tr>
-</table>
-<input type="submit" name="submit" value="&nbsp轉換&nbsp;">
-</form>
-	</body>
-	<?php
-if(!isset($_POST['submit'])){
-  exit;  
-}
-?>
-<table border="0">
-<tr>
-<td align="center">
-<h4 >網路</h4>
-</td>
-<td>
-    <input type="text" readonly="readonly" value="<? echo $f_ip_add;?>" >
-</td>
-</tr>
-<tr>
-<td id="h4" align="center">
-    <h4>遮罩</h4>
-</td>
-<td>
-    <input type="text" name="mask" readonly="readonly" value="<? echo $_POST['mask'];?>">
-</td>
-</tr>
-<tr>
-<td align="center">
-<h4 >第一個可用位置</h4>
-</td>
-<td>
-    <input type="text" readonly="readonly" value="<? echo $f_use_ip_add;?>">
-</td>
-</tr>
-<tr>
-<td id="h4" align="center">
-    <h4>最後可用位置</h4>
-</td>
-<td>
-    <input type="text" readonly="readonly" value="<?echo $final_use_ip_add;?>">
-</td>
-</tr>
-<tr>
-<td align="center">
-<h4 >廣播位置</h4>
-</td>
-<td>
-    <input type="text" readonly="readonly" value="<?echo $broadcast_add;?>">
-</td>
-</tr>
-<tr>
-<td id="h4" align="center">
-    <h4>可用位置數</h4>
-</td>
-<td>
-    <input type="text" readonly="readonly" value="<?echo $max_host-2;?>">
-</td>
-</tr>
-</table>
+						</tr>
+						<tr>
+							<td>
+    							<input type="text" name="ip" value="<?echo $ip_value;?>">
+							</td>
+						</tr>
+						<tr>
+							<td id="h4" align="center">
+    							<h4>子網路遮罩</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+    							<input type="text" name="mask" value="<?echo $ms_value; ?>">
+							</td>
+						</tr>
+					</table>
+					<input type="submit" name="submit" value="&nbsp轉換&nbsp;">
+				</form>
+			<?php
+				if(!isset($_POST['submit'])){
+  					exit;  
+				}
+			?>
+			<table border="0">
+				<tr>
+					<td align="center">
+						<h4 >網路</h4>
+					</td>
+					<td>
+    					<input type="text" readonly="readonly" value="<? echo $f_ip_add;?>" >
+					</td>
+				</tr>
+				<tr>
+					<td id="h4" align="center">
+    					<h4>遮罩</h4>
+					</td>
+					<td>
+    					<input type="text" name="mask" readonly="readonly" value="<? echo $_POST['mask'];?>">
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h4 >第一個可用位置</h4>
+					</td>
+					<td>
+    					<input type="text" readonly="readonly" value="<? echo $f_use_ip_add;?>">
+					</td>
+				</tr>
+				<tr>
+					<td id="h4" align="center">
+    					<h4>最後可用位置</h4>
+					</td>
+					<td>
+    					<input type="text" readonly="readonly" value="<?echo $final_use_ip_add;?>">
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h4 >廣播位置</h4>
+					</td>
+					<td>
+    					<input type="text" readonly="readonly" value="<?echo $broadcast_add;?>">
+					</td>
+				</tr>
+				<tr>
+					<td id="h4" align="center">
+    					<h4>可用位置數</h4>
+					</td>
+					<td>
+    					<input type="text" readonly="readonly" value="<?echo $max_host-2;?>">
+					</td>
+				</tr>
+			</table>
+		</body>
 </html>
